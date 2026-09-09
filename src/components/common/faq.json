@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_common_faqs",
+  "info": {
+    "displayName": "FAQ"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "qna": {
+      "type": "component",
+      "component": "common.qna",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

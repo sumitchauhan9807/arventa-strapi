@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_common_contact_forms",
+  "info": {
+    "displayName": "Contact Form"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "address": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

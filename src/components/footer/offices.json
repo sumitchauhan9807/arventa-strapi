@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_footer_offices",
+  "info": {
+    "displayName": "offices"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

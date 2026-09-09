@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "common.hero",
+        "common.count-up-section",
+        "common.cta-1",
+        "common.services-section",
+        "common.products-section",
+        "common.description-lists",
+        "common.network-component",
+        "common.faq",
+        "common.contact-form"
+      ]
+    }
+  }
+}

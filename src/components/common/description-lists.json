@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_common_description_lists",
+  "info": {
+    "displayName": "Description Lists"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "lists": {
+      "type": "component",
+      "component": "common.desc-lists",
+      "repeatable": true
+    },
+    "layoutType": {
+      "type": "enumeration",
+      "enum": [
+        "SVG",
+        "BLACK_BACKGROUND",
+        "NUMBERED",
+        "TAGGED_LISTS"
+      ]
+    }
+  },
+  "config": {}
+}

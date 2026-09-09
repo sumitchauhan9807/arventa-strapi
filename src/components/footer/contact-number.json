@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_contact_numbers",
+  "info": {
+    "displayName": "contactNumber"
+  },
+  "options": {},
+  "attributes": {
+    "flag": {
+      "type": "string"
+    },
+    "number": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

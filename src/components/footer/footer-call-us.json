@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_calluses",
+  "info": {
+    "displayName": "footerCallUs"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "component",
+      "component": "footer.contact-number",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

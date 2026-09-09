@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_offices",
+  "info": {
+    "displayName": "Footer Offices"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "offices": {
+      "type": "component",
+      "component": "footer.offices",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

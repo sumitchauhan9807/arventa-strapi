@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_common_block_description_basics",
+  "info": {
+    "displayName": "Block Description Basic"
+  },
+  "options": {},
+  "attributes": {
+    "subHeading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

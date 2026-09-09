@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_footer_footer_lists",
+  "info": {
+    "displayName": "Footer Lists"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "component",
+      "component": "footer.lists",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

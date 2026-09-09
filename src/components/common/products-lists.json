@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_common_products_lists",
+  "info": {
+    "displayName": "Products Lists"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "boldText": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

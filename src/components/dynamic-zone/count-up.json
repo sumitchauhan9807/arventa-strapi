@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_dynamic_zone_count_ups",
+  "info": {
+    "displayName": "Count Up"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "count": {
+      "type": "decimal"
+    },
+    "afterCountText": {
+      "type": "string"
+    },
+    "beforeCountText": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

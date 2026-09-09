@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_desc_lists",
+  "info": {
+    "displayName": "descLists"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "svg": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

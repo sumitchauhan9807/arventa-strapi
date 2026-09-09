@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_common_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "button1": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    },
+    "button2": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

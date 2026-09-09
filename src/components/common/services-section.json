@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_common_services_sections",
+  "info": {
+    "displayName": "Services Section"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    },
+    "serviceLists": {
+      "type": "component",
+      "component": "common.services-list",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_common_count_up_sections",
+  "info": {
+    "displayName": "Count Up Section"
+  },
+  "options": {},
+  "attributes": {
+    "countUpSection": {
+      "type": "component",
+      "component": "dynamic-zone.count-up",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

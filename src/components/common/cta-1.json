@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_common_cta_1s",
+  "info": {
+    "displayName": "CTA1"
+  },
+  "options": {},
+  "attributes": {
+    "blockDescription": {
+      "type": "component",
+      "component": "common.block-description-parah",
+      "repeatable": false
+    },
+    "bottomText1": {
+      "type": "string"
+    },
+    "bottomText2": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_common_services_lists",
+  "info": {
+    "displayName": "Services List"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "lists": {
+      "type": "component",
+      "component": "common.lists",
+      "repeatable": true
+    },
+    "active": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

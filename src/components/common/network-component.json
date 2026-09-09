@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_common_network_components",
+  "info": {
+    "displayName": "Network Component"
+  },
+  "options": {},
+  "attributes": {
+    "blockHeading": {
+      "type": "component",
+      "component": "common.block-description-basic",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

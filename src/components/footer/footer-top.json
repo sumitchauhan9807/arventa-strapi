@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_footer_footer_tops",
+  "info": {
+    "displayName": "Footer Top"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
