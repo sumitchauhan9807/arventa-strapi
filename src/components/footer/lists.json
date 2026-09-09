@@ -7,6 +7,9 @@
   "attributes": {
     "text": {
       "type": "string"
+    },
+    "link": {
+      "type": "string"
     }
   },
   "config": {}

@@ -302,6 +302,7 @@ export interface FooterLists extends Struct.ComponentSchema {
     displayName: 'lists';
   };
   attributes: {
+    link: Schema.Attribute.String;
     text: Schema.Attribute.String;
   };
 }
