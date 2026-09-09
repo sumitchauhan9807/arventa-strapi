@@ -315,6 +315,18 @@ export interface FooterOffices extends Struct.ComponentSchema {
   };
 }
 
+export interface NavigationNavigationLink extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_navigation_links';
+  info: {
+    displayName: 'Navigation Link';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    linkType: Schema.Attribute.Enumeration<['Normal', 'Big']>;
+    text: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -405,6 +417,7 @@ declare module '@strapi/strapi' {
       'footer.footer-top': FooterFooterTop;
       'footer.lists': FooterLists;
       'footer.offices': FooterOffices;
+      'navigation.navigation-link': NavigationNavigationLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

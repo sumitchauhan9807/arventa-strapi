@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_navigation_navigation_links",
+  "info": {
+    "displayName": "Navigation Link"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "linkType": {
+      "type": "enumeration",
+      "enum": [
+        "Normal",
+        "Big"
+      ]
+    }
+  },
+  "config": {}
+}
