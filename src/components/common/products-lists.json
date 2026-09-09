@@ -20,6 +20,10 @@
       "type": "component",
       "component": "common.button",
       "repeatable": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
     }
   },
   "config": {}

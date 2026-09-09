@@ -165,6 +165,7 @@ export interface CommonProductsLists extends Struct.ComponentSchema {
     displayName: 'Products Lists';
   };
   attributes: {
+    active: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     blockHeading: Schema.Attribute.Component<
       'common.block-description-basic',
       false
