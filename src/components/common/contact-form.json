@@ -9,6 +9,9 @@
       "type": "component",
       "component": "common.block-description-basic",
       "repeatable": false
+    },
+    "address": {
+      "type": "blocks"
     }
   },
   "config": {}

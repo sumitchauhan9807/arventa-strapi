@@ -42,6 +42,7 @@ export interface CommonContactForm extends Struct.ComponentSchema {
     displayName: 'Contact Form';
   };
   attributes: {
+    address: Schema.Attribute.Blocks;
     blockHeading: Schema.Attribute.Component<
       'common.block-description-basic',
       false
