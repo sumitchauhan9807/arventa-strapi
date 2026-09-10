@@ -297,6 +297,7 @@ export interface FooterFooterTop extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
