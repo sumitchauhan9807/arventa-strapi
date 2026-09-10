@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_form_text_fields",
+  "info": {
+    "displayName": "Text Field"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "FULL",
+        "HALF"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_form_dropdown_fields",
+  "info": {
+    "displayName": "Dropdown Field"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "component": "form.dropdown-options",
+      "repeatable": true
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "FULL",
+        "HALF"
+      ]
+    }
+  },
+  "config": {}
+}

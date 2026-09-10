@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_form_address_fields",
+  "info": {
+    "displayName": "Address Field"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "FULL",
+        "HALF"
+      ]
+    }
+  },
+  "config": {}
+}

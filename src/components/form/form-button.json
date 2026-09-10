@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_form_form_buttons",
+  "info": {
+    "displayName": "Form Button"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -12,6 +12,11 @@
     },
     "address": {
       "type": "blocks"
+    },
+    "contact_form": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contact-form.contact-form"
     }
   },
   "config": {}

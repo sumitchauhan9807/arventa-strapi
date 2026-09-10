@@ -47,6 +47,10 @@ export interface CommonContactForm extends Struct.ComponentSchema {
       'common.block-description-basic',
       false
     >;
+    contact_form: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::contact-form.contact-form'
+    >;
   };
 }
 
@@ -317,6 +321,76 @@ export interface FooterOffices extends Struct.ComponentSchema {
   };
 }
 
+export interface FormAddressField extends Struct.ComponentSchema {
+  collectionName: 'components_form_address_fields';
+  info: {
+    displayName: 'Address Field';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
+  };
+}
+
+export interface FormDropdownField extends Struct.ComponentSchema {
+  collectionName: 'components_form_dropdown_fields';
+  info: {
+    displayName: 'Dropdown Field';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    options: Schema.Attribute.Component<'form.dropdown-options', true>;
+    size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
+  };
+}
+
+export interface FormDropdownOptions extends Struct.ComponentSchema {
+  collectionName: 'components_form_dropdown_options';
+  info: {
+    displayName: 'Dropdown Options';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface FormEmailField extends Struct.ComponentSchema {
+  collectionName: 'components_form_email_fields';
+  info: {
+    displayName: 'Email Field';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
+  };
+}
+
+export interface FormFormButton extends Struct.ComponentSchema {
+  collectionName: 'components_form_form_buttons';
+  info: {
+    displayName: 'Form Button';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface FormTextField extends Struct.ComponentSchema {
+  collectionName: 'components_form_text_fields';
+  info: {
+    displayName: 'Text Field';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
+  };
+}
+
 export interface NavigationNavigationLink extends Struct.ComponentSchema {
   collectionName: 'components_navigation_navigation_links';
   info: {
@@ -419,6 +493,12 @@ declare module '@strapi/strapi' {
       'footer.footer-top': FooterFooterTop;
       'footer.lists': FooterLists;
       'footer.offices': FooterOffices;
+      'form.address-field': FormAddressField;
+      'form.dropdown-field': FormDropdownField;
+      'form.dropdown-options': FormDropdownOptions;
+      'form.email-field': FormEmailField;
+      'form.form-button': FormFormButton;
+      'form.text-field': FormTextField;
       'navigation.navigation-link': NavigationNavigationLink;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
