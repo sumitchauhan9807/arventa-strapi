@@ -25,6 +25,12 @@
         "videos",
         "audios"
       ]
+    },
+    "height": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
     }
   }
 }

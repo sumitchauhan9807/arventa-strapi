@@ -297,7 +297,9 @@ export interface FooterFooterTop extends Struct.ComponentSchema {
   };
   attributes: {
     address: Schema.Attribute.Text;
+    height: Schema.Attribute.Integer;
     logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    width: Schema.Attribute.Integer;
   };
 }
 
@@ -329,6 +331,8 @@ export interface FormAddressField extends Struct.ComponentSchema {
   };
   attributes: {
     label: Schema.Attribute.String;
+    maxLength: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<100>;
+    minLength: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<20>;
     name: Schema.Attribute.String;
     size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
   };
@@ -387,6 +391,8 @@ export interface FormTextField extends Struct.ComponentSchema {
   };
   attributes: {
     label: Schema.Attribute.String;
+    maxLength: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<20>;
+    minLength: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<10>;
     name: Schema.Attribute.String;
     size: Schema.Attribute.Enumeration<['FULL', 'HALF']>;
   };

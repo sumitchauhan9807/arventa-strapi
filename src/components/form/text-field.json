@@ -17,6 +17,14 @@
         "FULL",
         "HALF"
       ]
+    },
+    "minLength": {
+      "type": "integer",
+      "default": 10
+    },
+    "maxLength": {
+      "type": "integer",
+      "default": 20
     }
   },
   "config": {}
