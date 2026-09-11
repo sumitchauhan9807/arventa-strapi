@@ -85,6 +85,13 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       return ctx.badRequest("reCAPTCHA verification failed.");
     }
 
+    const emailSettings = await strapi
+      .documents("api::email-setting.email-setting")
+      .findFirst();
+    if (!emailSettings?.toEmail) {
+      throw new Error("Admin email is not configured");
+    }
+
     try {
       // -----------------------------------------
       // Load HTML template
@@ -156,8 +163,10 @@ AR Venta
         .plugin("email")
         .service("email")
         .send({
-          to: "sumitchauhan9807666@gmail.com",
+          // to: "sumitchauhan9807666@gmail.com",
           from: "AR Venta <mail@ar-venta.de>",
+          to: emailSettings.toEmail,
+          cc: emailSettings.ccEmail || undefined,
           replyTo: email,
           subject: `New enquiry - ${areaOfIntrest}`,
           text,
