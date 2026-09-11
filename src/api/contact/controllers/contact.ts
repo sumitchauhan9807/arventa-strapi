@@ -131,7 +131,7 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       // -----------------------------------------
 
       const text = `
-NEW ENQUIRY - AR VENTA
+NEW ENQUIRY - ARVENTA
 
 CONTACT DETAILS
 --------------------------------
@@ -152,7 +152,7 @@ ${message}
 
 Reply to: ${email}
 
-AR Venta
+Arventa
       `.trim();
 
       // -----------------------------------------
@@ -164,7 +164,7 @@ AR Venta
         .service("email")
         .send({
           // to: "sumitchauhan9807666@gmail.com",
-          from: "AR Venta <mail@ar-venta.de>",
+          from: "Arventa <mail@ar-venta.de>",
           to: emailSettings.toEmail,
           cc: emailSettings.ccEmail || undefined,
           replyTo: email,
