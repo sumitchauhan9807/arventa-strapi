@@ -152,6 +152,16 @@ export interface CommonLists extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonLogos extends Struct.ComponentSchema {
+  collectionName: 'components_common_logos';
+  info: {
+    displayName: 'logos';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface CommonNetworkComponent extends Struct.ComponentSchema {
   collectionName: 'components_common_network_components';
   info: {
@@ -163,6 +173,20 @@ export interface CommonNetworkComponent extends Struct.ComponentSchema {
       false
     >;
     video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface CommonPartners extends Struct.ComponentSchema {
+  collectionName: 'components_common_partners';
+  info: {
+    displayName: 'Partners';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<
+      'common.block-description-basic',
+      true
+    >;
+    logos: Schema.Attribute.Component<'common.logos', true>;
   };
 }
 
@@ -527,7 +551,9 @@ declare module '@strapi/strapi' {
       'common.faq': CommonFaq;
       'common.hero': CommonHero;
       'common.lists': CommonLists;
+      'common.logos': CommonLogos;
       'common.network-component': CommonNetworkComponent;
+      'common.partners': CommonPartners;
       'common.products-lists': CommonProductsLists;
       'common.products-section': CommonProductsSection;
       'common.qna': CommonQna;

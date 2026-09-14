@@ -812,6 +812,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         'common.faq',
         'common.contact-form',
         'common.team-component',
+        'common.partners',
       ]
     > &
       Schema.Attribute.SetPluginOptions<{
