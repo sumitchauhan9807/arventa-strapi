@@ -184,7 +184,7 @@ export interface CommonPartners extends Struct.ComponentSchema {
   attributes: {
     blockHeading: Schema.Attribute.Component<
       'common.block-description-basic',
-      true
+      false
     >;
     logos: Schema.Attribute.Component<'common.logos', true>;
   };

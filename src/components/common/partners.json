@@ -8,7 +8,7 @@
     "blockHeading": {
       "type": "component",
       "component": "common.block-description-basic",
-      "repeatable": true
+      "repeatable": false
     },
     "logos": {
       "type": "component",
