@@ -136,6 +136,8 @@ export interface CommonHero extends Struct.ComponentSchema {
     >;
     button1: Schema.Attribute.Component<'common.button', false>;
     button2: Schema.Attribute.Component<'common.button', false>;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    videoHeight: Schema.Attribute.Integer;
   };
 }
 
@@ -160,6 +162,7 @@ export interface CommonNetworkComponent extends Struct.ComponentSchema {
       'common.block-description-basic',
       false
     >;
+    video: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -229,6 +232,44 @@ export interface CommonServicesSection extends Struct.ComponentSchema {
       false
     >;
     serviceLists: Schema.Attribute.Component<'common.services-list', true>;
+  };
+}
+
+export interface CommonSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_common_social_medias';
+  info: {
+    displayName: 'socialMedia';
+  };
+  attributes: {};
+}
+
+export interface CommonTeam extends Struct.ComponentSchema {
+  collectionName: 'components_common_teams';
+  info: {
+    displayName: 'team';
+  };
+  attributes: {
+    designation: Schema.Attribute.String;
+    facebook: Schema.Attribute.String;
+    instagram: Schema.Attribute.String;
+    linkedin: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    twitter: Schema.Attribute.String;
+  };
+}
+
+export interface CommonTeamComponent extends Struct.ComponentSchema {
+  collectionName: 'components_common_team_components';
+  info: {
+    displayName: 'Team Component';
+  };
+  attributes: {
+    blockHeading: Schema.Attribute.Component<
+      'common.block-description-basic',
+      false
+    >;
+    team: Schema.Attribute.Component<'common.team', true>;
   };
 }
 
@@ -492,6 +533,9 @@ declare module '@strapi/strapi' {
       'common.qna': CommonQna;
       'common.services-list': CommonServicesList;
       'common.services-section': CommonServicesSection;
+      'common.social-media': CommonSocialMedia;
+      'common.team': CommonTeam;
+      'common.team-component': CommonTeamComponent;
       'dynamic-zone.count-up': DynamicZoneCountUp;
       'footer.contact-number': FooterContactNumber;
       'footer.footer-call-us': FooterFooterCallUs;

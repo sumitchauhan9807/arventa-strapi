@@ -9,6 +9,16 @@
       "type": "component",
       "component": "common.block-description-basic",
       "repeatable": false
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   },
   "config": {}

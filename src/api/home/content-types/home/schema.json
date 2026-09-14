@@ -31,7 +31,8 @@
         "common.description-lists",
         "common.network-component",
         "common.faq",
-        "common.contact-form"
+        "common.contact-form",
+        "common.team-component"
       ]
     }
   }
