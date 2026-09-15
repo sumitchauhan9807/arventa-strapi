@@ -32,6 +32,11 @@
     },
     "facebook": {
       "type": "string"
+    },
+    "socialMedia": {
+      "type": "component",
+      "component": "common.social-media",
+      "repeatable": true
     }
   },
   "config": {}

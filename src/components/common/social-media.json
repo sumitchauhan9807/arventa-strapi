@@ -4,6 +4,23 @@
     "displayName": "socialMedia"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "link": {
+      "type": "string"
+    }
+  },
   "config": {}
 }

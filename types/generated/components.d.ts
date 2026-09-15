@@ -159,6 +159,8 @@ export interface CommonLogos extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
   };
 }
 
@@ -264,7 +266,11 @@ export interface CommonSocialMedia extends Struct.ComponentSchema {
   info: {
     displayName: 'socialMedia';
   };
-  attributes: {};
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
 }
 
 export interface CommonTeam extends Struct.ComponentSchema {
@@ -279,6 +285,7 @@ export interface CommonTeam extends Struct.ComponentSchema {
     linkedin: Schema.Attribute.String;
     name: Schema.Attribute.String;
     picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    socialMedia: Schema.Attribute.Component<'common.social-media', true>;
     twitter: Schema.Attribute.String;
   };
 }
