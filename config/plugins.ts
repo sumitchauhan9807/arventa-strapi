@@ -42,6 +42,11 @@ const config = ({
       },
     },
   },
+  graphql: {
+    config: {
+      amountLimit: 1000,
+    },
+  },
   email: {
     config: {
       provider: "nodemailer",
