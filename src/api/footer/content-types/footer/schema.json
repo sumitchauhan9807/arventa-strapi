@@ -70,6 +70,26 @@
           "localized": true
         }
       }
+    },
+    "privacyPolicy": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.button",
+      "repeatable": false
+    },
+    "termsOfUse": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.button",
+      "repeatable": false
     }
   }
 }
