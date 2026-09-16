@@ -186,10 +186,10 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       // transporter.get('fr')
 
       await transporter.sendMail({
-       to: "sumitchauhan9807666@gmail.com",
+      //  to: "sumitchauhan9807666@gmail.com",
           from: `Arventa <mail@${domain}>`,
-          // to: emailSettings.toEmail,
-          // cc: emailSettings.ccEmail || undefined,
+          to: emailSettings.toEmail,
+          cc: emailSettings.ccEmail || undefined,
           replyTo: email,
           subject: `New enquiry - ${areaOfIntrest}`,
           text,
