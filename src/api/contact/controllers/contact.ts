@@ -185,15 +185,17 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       //   });
       // transporter.get('fr')
 
+      const toUser = (transporter.options as any).auth.user;
+
       await transporter.sendMail({
-      //  to: "sumitchauhan9807666@gmail.com",
-          from: `Arventa <mail@${domain}>`,
-          to: emailSettings.toEmail,
-          cc: emailSettings.ccEmail || undefined,
-          replyTo: email,
-          subject: `New enquiry - ${areaOfIntrest}`,
-          text,
-          html,
+        //  to: "sumitchauhan9807666@gmail.com",
+        from: `Arventa <mail@${domain}>`,
+        to: toUser,
+        cc: emailSettings.ccEmail || undefined,
+        replyTo: email,
+        subject: `New enquiry - ${areaOfIntrest}`,
+        text,
+        html,
       });
 
       return ctx.send({
