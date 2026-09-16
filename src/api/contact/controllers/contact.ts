@@ -1,6 +1,7 @@
 import type { Core } from "@strapi/strapi";
 import fs from "fs";
 import path from "path";
+import { getTransporter } from "../services/contact";
 
 type RecaptchaResponse = {
   success: boolean;
@@ -50,6 +51,7 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       phone,
       surname,
       captchaToken,
+      domain,
     } = ctx.request.body ?? {};
 
     // Validation
@@ -61,12 +63,21 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       !mobile ||
       !name ||
       !phone ||
-      !surname
+      !surname ||
+      !domain
     ) {
       return ctx.badRequest(
-        "Area of interest, company, email, message, mobile, name, surname and phone are required.",
+        "Area of interest, company, email, message, mobile, name, surname and phone ,domain are required.",
       );
     }
+    let transporter = getTransporter(domain);
+    if (!transporter) {
+      return ctx.badRequest("Invalid domain.");
+    }
+    //  return ctx.send({
+    //     domain: domain,
+    //     message: "Your message has been sent successfully.",
+    //   });
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -131,47 +142,59 @@ const controller = ({ strapi }: { strapi: Core.Strapi }) => ({
       // -----------------------------------------
 
       const text = `
-NEW ENQUIRY - ARVENTA
+        NEW ENQUIRY - ARVENTA
 
-CONTACT DETAILS
---------------------------------
+        CONTACT DETAILS
+        --------------------------------
 
-Name: ${name} ${surname}
-Company: ${company}
-Email: ${email}
-Mobile: ${mobile}
-Phone: ${phone}
-Area of Interest: ${areaOfIntrest}
+        Name: ${name} ${surname}
+        Company: ${company}
+        Email: ${email}
+        Mobile: ${mobile}
+        Phone: ${phone}
+        Area of Interest: ${areaOfIntrest}
 
-MESSAGE
---------------------------------
+        MESSAGE
+        --------------------------------
 
-${message}
+        ${message}
 
---------------------------------
+        --------------------------------
 
-Reply to: ${email}
+        Reply to: ${email}
 
-Arventa
+        Arventa
       `.trim();
 
       // -----------------------------------------
       // Send email
       // -----------------------------------------
 
-      await strapi
-        .plugin("email")
-        .service("email")
-        .send({
-          // to: "sumitchauhan9807666@gmail.com",
-          from: "Arventa <mail@ar-venta.de>",
-          to: emailSettings.toEmail,
-          cc: emailSettings.ccEmail || undefined,
+      // await strapi
+      //   .plugin("email")
+      //   .service("email")
+      //   .send({
+      //     // to: "sumitchauhan9807666@gmail.com",
+      //     from: "Arventa <mail@ar-venta.de>",
+      //     // to: emailSettings.toEmail,
+      //     // cc: emailSettings.ccEmail || undefined,
+      //     replyTo: email,
+      //     subject: `New enquiry - ${areaOfIntrest}`,
+      //     text,
+      //     html,
+      //   });
+      // transporter.get('fr')
+
+      await transporter.sendMail({
+       to: "sumitchauhan9807666@gmail.com",
+          from: `Arventa <mail@${domain}>`,
+          // to: emailSettings.toEmail,
+          // cc: emailSettings.ccEmail || undefined,
           replyTo: email,
           subject: `New enquiry - ${areaOfIntrest}`,
           text,
           html,
-        });
+      });
 
       return ctx.send({
         success: true,
