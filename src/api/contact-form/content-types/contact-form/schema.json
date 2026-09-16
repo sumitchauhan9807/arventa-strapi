@@ -61,6 +61,14 @@
           "localized": true
         }
       }
+    },
+    "formButtonText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

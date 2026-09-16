@@ -51,7 +51,6 @@ export interface CommonContactForm extends Struct.ComponentSchema {
       'oneToOne',
       'api::contact-form.contact-form'
     >;
-    formButtonText: Schema.Attribute.String;
   };
 }
 

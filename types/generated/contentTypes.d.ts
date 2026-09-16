@@ -621,6 +621,12 @@ export interface ApiContactFormContactForm extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
+    formButtonText: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     formFields: Schema.Attribute.DynamicZone<
       [
         'form.text-field',
