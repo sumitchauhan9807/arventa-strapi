@@ -90,6 +90,16 @@
       },
       "component": "common.button",
       "repeatable": false
+    },
+    "cookiePolicy": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.button",
+      "repeatable": false
     }
   }
 }
