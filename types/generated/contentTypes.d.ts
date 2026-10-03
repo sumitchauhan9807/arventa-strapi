@@ -712,22 +712,66 @@ export interface ApiDidDid extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    FAQ: Schema.Attribute.Component<'common.faq', false>;
-    heroSection: Schema.Attribute.Component<'did.hero-section', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::did.did'> &
-      Schema.Attribute.Private;
+    FAQ: Schema.Attribute.Component<'common.faq', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroSection: Schema.Attribute.Component<'did.hero-section', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::did.did'>;
     publishedAt: Schema.Attribute.DateTime;
-    section2: Schema.Attribute.Component<'did.section2', true>;
-    section3: Schema.Attribute.Component<'did.section3', false>;
-    section4: Schema.Attribute.Component<'did.section4', false>;
-    section5: Schema.Attribute.Component<'did.section5', false>;
-    section6: Schema.Attribute.Component<'did.section6', false>;
-    section7: Schema.Attribute.Component<'did.section7', false>;
+    section2: Schema.Attribute.Component<'did.section2', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section3: Schema.Attribute.Component<'did.section3', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section4: Schema.Attribute.Component<'did.section4', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section5: Schema.Attribute.Component<'did.section5', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section6: Schema.Attribute.Component<'did.section6', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    section7: Schema.Attribute.Component<'did.section7', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
