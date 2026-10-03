@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_did_section3s",
+  "info": {
+    "displayName": "Section3"
+  },
+  "options": {},
+  "attributes": {
+    "subHeading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "lists": {
+      "type": "component",
+      "component": "did.lists",
+      "repeatable": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

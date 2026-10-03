@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_did_section4s",
+  "info": {
+    "displayName": "Section4"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "numberedLists": {
+      "type": "component",
+      "component": "did.numbered-lists",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

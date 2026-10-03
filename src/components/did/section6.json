@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_did_section6s",
+  "info": {
+    "displayName": "Section6"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "button1": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    },
+    "button2": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

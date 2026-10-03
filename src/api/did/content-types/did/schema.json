@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "dids",
+  "info": {
+    "singularName": "did",
+    "pluralName": "dids",
+    "displayName": "DID"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "component",
+      "component": "did.hero-section",
+      "repeatable": false
+    },
+    "section2": {
+      "type": "component",
+      "component": "did.section2",
+      "repeatable": true
+    },
+    "section3": {
+      "type": "component",
+      "component": "did.section3",
+      "repeatable": false
+    },
+    "section4": {
+      "type": "component",
+      "component": "did.section4",
+      "repeatable": false
+    },
+    "section5": {
+      "type": "component",
+      "component": "did.section5",
+      "repeatable": false
+    },
+    "section6": {
+      "type": "component",
+      "component": "did.section6",
+      "repeatable": false
+    },
+    "section7": {
+      "type": "component",
+      "component": "did.section7",
+      "repeatable": false
+    },
+    "FAQ": {
+      "type": "component",
+      "component": "common.faq",
+      "repeatable": false
+    }
+  }
+}

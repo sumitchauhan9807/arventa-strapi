@@ -304,6 +304,130 @@ export interface CommonTeamComponent extends Struct.ComponentSchema {
   };
 }
 
+export interface DidHeroSection extends Struct.ComponentSchema {
+  collectionName: 'components_did_hero_sections';
+  info: {
+    displayName: 'Hero Section';
+  };
+  attributes: {
+    button1: Schema.Attribute.Component<'common.button', false>;
+    button2: Schema.Attribute.Component<'common.button', false>;
+    content: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface DidImageBlocks extends Struct.ComponentSchema {
+  collectionName: 'components_did_image_blocks';
+  info: {
+    displayName: 'Image Blocks';
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface DidLists extends Struct.ComponentSchema {
+  collectionName: 'components_did_lists';
+  info: {
+    displayName: 'lists';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface DidNumberedLists extends Struct.ComponentSchema {
+  collectionName: 'components_did_numbered_lists';
+  info: {
+    displayName: 'Numbered Lists';
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+  };
+}
+
+export interface DidSection2 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section2s';
+  info: {
+    displayName: 'Section2';
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface DidSection3 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section3s';
+  info: {
+    displayName: 'Section3';
+  };
+  attributes: {
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    lists: Schema.Attribute.Component<'did.lists', true>;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface DidSection4 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section4s';
+  info: {
+    displayName: 'Section4';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    numberedLists: Schema.Attribute.Component<'did.numbered-lists', true>;
+  };
+}
+
+export interface DidSection5 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section5s';
+  info: {
+    displayName: 'Section5';
+  };
+  attributes: {
+    blocks: Schema.Attribute.Component<'did.numbered-lists', true>;
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    subHeading: Schema.Attribute.String;
+  };
+}
+
+export interface DidSection6 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section6s';
+  info: {
+    displayName: 'Section6';
+  };
+  attributes: {
+    button1: Schema.Attribute.Component<'common.button', false>;
+    button2: Schema.Attribute.Component<'common.button', false>;
+    content: Schema.Attribute.Text;
+    heading: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface DidSection7 extends Struct.ComponentSchema {
+  collectionName: 'components_did_section7s';
+  info: {
+    displayName: 'Section7';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    imageBlocks: Schema.Attribute.Component<'did.image-blocks', true>;
+    subHeading: Schema.Attribute.Text;
+  };
+}
+
 export interface DynamicZoneCountUp extends Struct.ComponentSchema {
   collectionName: 'components_dynamic_zone_count_ups';
   info: {
@@ -569,6 +693,16 @@ declare module '@strapi/strapi' {
       'common.social-media': CommonSocialMedia;
       'common.team': CommonTeam;
       'common.team-component': CommonTeamComponent;
+      'did.hero-section': DidHeroSection;
+      'did.image-blocks': DidImageBlocks;
+      'did.lists': DidLists;
+      'did.numbered-lists': DidNumberedLists;
+      'did.section2': DidSection2;
+      'did.section3': DidSection3;
+      'did.section4': DidSection4;
+      'did.section5': DidSection5;
+      'did.section6': DidSection6;
+      'did.section7': DidSection7;
       'dynamic-zone.count-up': DynamicZoneCountUp;
       'footer.contact-number': FooterContactNumber;
       'footer.footer-call-us': FooterFooterCallUs;

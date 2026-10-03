@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_did_section7s",
+  "info": {
+    "displayName": "Section7"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "imageBlocks": {
+      "type": "component",
+      "component": "did.image-blocks",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

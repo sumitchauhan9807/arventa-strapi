@@ -702,6 +702,38 @@ export interface ApiCookiePolicyCookiePolicy extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiDidDid extends Struct.SingleTypeSchema {
+  collectionName: 'dids';
+  info: {
+    displayName: 'DID';
+    pluralName: 'dids';
+    singularName: 'did';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    FAQ: Schema.Attribute.Component<'common.faq', false>;
+    heroSection: Schema.Attribute.Component<'did.hero-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::did.did'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section2: Schema.Attribute.Component<'did.section2', true>;
+    section3: Schema.Attribute.Component<'did.section3', false>;
+    section4: Schema.Attribute.Component<'did.section4', false>;
+    section5: Schema.Attribute.Component<'did.section5', false>;
+    section6: Schema.Attribute.Component<'did.section6', false>;
+    section7: Schema.Attribute.Component<'did.section7', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEmailSettingEmailSetting extends Struct.SingleTypeSchema {
   collectionName: 'email_settings';
   info: {
@@ -1539,6 +1571,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::cookie-policy.cookie-policy': ApiCookiePolicyCookiePolicy;
+      'api::did.did': ApiDidDid;
       'api::email-setting.email-setting': ApiEmailSettingEmailSetting;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_did_hero_sections",
+  "info": {
+    "displayName": "Hero Section"
+  },
+  "options": {},
+  "attributes": {
+    "subHeading": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "button1": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    },
+    "button2": {
+      "type": "component",
+      "component": "common.button",
+      "repeatable": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

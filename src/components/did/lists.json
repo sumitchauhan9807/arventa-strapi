@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_did_lists",
+  "info": {
+    "displayName": "lists"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_did_numbered_lists",
+  "info": {
+    "displayName": "Numbered Lists"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
