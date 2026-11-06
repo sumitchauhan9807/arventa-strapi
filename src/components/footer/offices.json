@@ -7,6 +7,11 @@
   "attributes": {
     "content": {
       "type": "blocks"
+    },
+    "contact": {
+      "type": "component",
+      "component": "footer.contact-number",
+      "repeatable": false
     }
   },
   "config": {}
