@@ -11,7 +11,7 @@
     "contact": {
       "type": "component",
       "component": "footer.contact-number",
-      "repeatable": false
+      "repeatable": true
     }
   },
   "config": {}
