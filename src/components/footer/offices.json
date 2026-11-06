@@ -12,6 +12,9 @@
       "type": "component",
       "component": "footer.contact-number",
       "repeatable": true
+    },
+    "mail": {
+      "type": "string"
     }
   },
   "config": {}

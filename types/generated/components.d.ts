@@ -518,6 +518,7 @@ export interface FooterOffices extends Struct.ComponentSchema {
   attributes: {
     contact: Schema.Attribute.Component<'footer.contact-number', true>;
     content: Schema.Attribute.Blocks;
+    mail: Schema.Attribute.String;
   };
 }
 
